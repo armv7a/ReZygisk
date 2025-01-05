@@ -51,7 +51,6 @@ androidComponents.onVariants { variant ->
             ":zygiskd:buildAndStrip",
         )
         into(moduleDir)
-        from("${rootProject.projectDir}/README.md")
         from("$projectDir/src") {
             exclude("module.prop", "customize.sh", "post-fs-data.sh", "service.sh", "uninstall.sh")
             filter<FixCrLfFilter>("eol" to FixCrLfFilter.CrLf.newInstance("lf"))
